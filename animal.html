@@ -5,24 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
-  <style>
+  <!-- <style>
     .container {
       display: flex;
-      justify-content: space-around;
       align-items: center;
       width: 80%;
-      margin-left: 10%;
+      justify-content: center;
+    }
+    @media (max-width: 1200px) {
+      .container {
+        flex-direction: column;
+      }
+    }
+    .parent-container {
+      display: flex;
+      justify-content: center;
     }
     .wrapper {
       width: 500px;
       height: 400px;
-      padding-top: 5%;
     }
     .text {
-      width: 45%;
     }
     p {
-      margin: 0 0 20px 0;
       padding: 5%;
       font-size: large;
       font-family: sans-serif;
@@ -40,35 +45,90 @@
       text-align: center;
       position: relative;
     }
+  </style> -->
+  <style>
+    .main {
+      display: flex;
+      flex-direction: column;
+    }
+    .banner {
+      background-image: url("https://webstockreview.net/images/banners-clipart-animal-14.jpg");
+      background-size: cover;
+      background-position: center;
+      height: 250px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+      position: relative;
+    }
+    .parent-container {
+      padding-top: 4%;
+      display: flex;
+      justify-content: center;
+    }
+    .container {
+      display: flex;
+      align-items: center;
+      width: 80%;
+      justify-content: center;
+    }
+    @media (max-width: 1020px) {
+      .container {
+        flex-direction: column;
+      }
+      .image-wrapper > img {
+        width: 78vw !important;
+        height: 47vh !important;
+      }
+    }
+    .image-wrapper > img {
+      width: 33vw;
+      height: 47vh;
+    }
+    .text {
+      font-size: large;
+      font-family: sans-serif;
+      padding: 1% 0% 0% 1%;
+      background-color: pink;
+    }
   </style>
   <body>
-    <h1 style="display: flex; justify-content: center; background-color: aqua">
-      Animals and planets
-    </h1>
-    <div class="banner"></div>
-    <div class="container">
-      <div class="text">
-        <p>
-          Animals are multicellular, eukaryotic organisms of the kingdom
-          Animalia. Animals are a diverse group of living organisms that share
-          certain characteristics, such as being multicellular, having
-          specialized tissues, and being capable of movement at some stage in
-          their life.
-        </p>
-      </div>
-      <img
-        src="http://getwallpapers.com/wallpaper/full/6/d/0/868430-download-free-cute-puppies-wallpaper-hd-1920x1280-free-download.jpg"
-        class="wrapper"
-        alt="Cute puppies"
-      />
-      <div class="text">
-        <p>
-          Planets are celestial bodies orbiting a star or stellar remnant that
-          are massive. Planets are celestial bodies that orbit a star, are
-          spherical due to their gravity, and have cleared their orbital path of
-          other debris. Our Solar System, for example, consists of eight
-          recognized planets.
-        </p>
+    <div class="main">
+      <h1
+        style="display: flex; justify-content: center; background-color: aqua"
+      >
+        Animals and planets
+      </h1>
+      <div class="banner"></div>
+      <div class="parent-container">
+        <div class="container">
+          <div class="text">
+            <p>
+              Animals are multicellular, eukaryotic organisms of the kingdom
+              Animalia. Animals are a diverse group of living organisms that
+              share certain characteristics, such as being multicellular, having
+              specialized tissues, and being capable of movement at some stage
+              in their life.
+            </p>
+          </div>
+          <div class="image-wrapper">
+            <img
+              src="http://getwallpapers.com/wallpaper/full/6/d/0/868430-download-free-cute-puppies-wallpaper-hd-1920x1280-free-download.jpg"
+              alt="Cute puppies"
+            />
+          </div>
+          <div class="text">
+            <p>
+              Planets are celestial bodies orbiting a star or stellar remnant
+              that are massive. Planets are celestial bodies that orbit a star,
+              are spherical due to their gravity, and have cleared their orbital
+              path of other debris. Our Solar System, for example, consists of
+              eight recognized planets.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </body>
