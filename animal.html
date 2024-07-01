@@ -92,11 +92,32 @@
           </div>
         </div>
       </div>
-      <button id="close-btn">CLICK ME</button>
+      <!-- <button id="close-btn">CLICK ME</button> -->
     </div>
-    <div style="display: flex">
+    <!-- <div style="display: flex">
       <input id="text-inp" placeholder="Enter your name" />
       <button id="submit-btn">Submit</button>
+    </div> -->
+    <div style="display: flex; justify-content: center">
+      <form
+        method="post"
+        style="
+          display: flex;
+          flex-direction: column;
+          width: 20vw;
+          border: 2px solid black;
+          padding: 2%;
+          background-color: azure;
+        "
+        id="name-form"
+      >
+        <label for="name">Name:</label>
+        <input type="text" id="name" required />
+
+        <label for="email">Suggested Name:</label>
+        <input type="text" id="suggested" required /><br /><br />
+        <button id="submit-btn" style="margin-top: 5%">Submit</button>
+      </form>
     </div>
     <script src="./index.js"></script>
   </body>
