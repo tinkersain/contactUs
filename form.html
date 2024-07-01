@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sample Form</title>
+    <link rel="stylesheet" href="./form.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  </head>
+  <body>
+    <h1><span>Course Enrollment Form</span></h1>
+    <div class="container">
+      <form>
+        <div class="row">
+          <h4>Student Details</h4>
+          <div class="input-group input-group-icon">
+            <input type="text" placeholder="Full Name" />
+            <div class="input-icon"><i class="fa fa-user"></i></div>
+          </div>
+          <div class="input-group input-group-icon">
+            <input type="email" placeholder="Email Adress" />
+            <div class="input-icon"><i class="fa fa-envelope"></i></div>
+          </div>
+          <div class="input-group input-group-icon">
+            <input type="text" placeholder="Permanent address" />
+            <div class="input-icon"><i class="fa fa-home"></i></div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-half">
+            <h4>Date of Birth</h4>
+            <div class="input-group">
+              <div class="col-third">
+                <input type="text" placeholder="DD" />
+              </div>
+              <div class="col-third">
+                <input type="text" placeholder="MM" />
+              </div>
+              <div class="col-third">
+                <input type="text" placeholder="YYYY" />
+              </div>
+            </div>
+          </div>
+          <div class="col-half">
+            <h4>Gender</h4>
+            <div class="input-group">
+              <input id="gender-male" type="radio" name="gender" value="male" />
+              <label for="gender-male">Male</label>
+              <input
+                id="gender-female"
+                type="radio"
+                name="gender"
+                value="female"
+              />
+              <label for="gender-female">Female</label>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <h4>Course Enrollment</h4>
+          <div class="input-group">
+            <input id="course-btech" type="radio" name="course" value="btech" />
+            <label for="course-btech"
+              ><span><i class="fa fa-book"></i>B.Tech</span></label
+            >
+            <input id="course-mtech" type="radio" name="course" value="mtech" />
+            <label for="course-mtech"
+              ><span><i class="fa fa-desktop"></i>M.Tech</span></label
+            >
+          </div>
+          <div class="row">
+            <h4>Preferred Branch</h4>
+            <div class="input-group">
+              <input id="branch-cs" type="radio" name="branch" value="cs" />
+              <label for="branch-cs"
+                ><span><i class="fa fa-desktop"></i>Computer</span></label
+              >
+              <input
+                id="branch-electrical"
+                type="radio"
+                name="branch"
+                value="electrical"
+              />
+              <label for="branch-electrical"
+                ><span><i class="fa fa-bolt"></i>Electrical</span></label
+              >
+              <input
+                id="branch-mechanical"
+                type="radio"
+                name="branch"
+                value="mechanical"
+              />
+              <label for="branch-mechanical"
+                ><span><i class="fa fa-wrench"></i>Mechanic</span></label
+              >
+              <input
+                id="branch-civil"
+                type="radio"
+                name="branch"
+                value="civil"
+              />
+              <label for="branch-civil"
+                ><span><i class="fa fa-building"></i>Civil</span></label
+              >
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <h4>Terms and Conditions</h4>
+          <div class="input-group">
+            <input id="terms" type="checkbox" />
+            <label for="terms"
+              >I hereby accept that all the above mentioned details are
+              correct.</label
+            >
+          </div>
+        </div>
+        <div class="sub">
+          <button type="submit" id="submit-btn">
+            <i class="fa fa-paper-plane"></i> Submit
+          </button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
