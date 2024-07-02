@@ -8,15 +8,21 @@
       background-color: aqua;
     }
     div {
-      border: 2px solid black;
+      /* border: 2px solid black; */
       /* display: flex;
       flex-direction: column; */
-      grid-template-columns: 1fr;
-      grid-gap: 10px;
-      background-color: beige;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
     }
     div + h1 {
       color: goldenrod;
+    }
+    @media screen and(min-width:320px) and (max-width: 425px) {
+      div {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+      }
     }
   </style>
   <body style="background-color: lightpink">
@@ -68,13 +74,12 @@
     <p style="margin: 100px 40px 45px 56px">Say hello to all cuties</p>
     <div>
       <div class="h">
-        <div><h1>Hello</h1></div>
-        <div><h1>Hello</h1></div>
+        <div style="background-color: aliceblue"><h1>Hello</h1></div>
+        <div style="background-color: blue"><h1>Hello</h1></div>
       </div>
-      <div></div>
-      <h1>Hello</h1>
-      <div><h1>Hello</h1></div>
+      <div style="background-color: rgb(182, 22, 22)"><h1>Hello</h1></div>
+      <div style="background-color: blueviolet"><h1>Hello</h1></div>
     </div>
-    <h1>Hello</h1>
+    <h1 style="background-color: rgb(159, 128, 187)">Hello</h1>
   </body>
 </html>
