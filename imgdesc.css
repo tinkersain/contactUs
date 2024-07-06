@@ -1,0 +1,60 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+}
+
+.brand-name {
+  font-family: "Kode Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 40px;
+  font-style: normal;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-menu a {
+  color: white;
+  text-decoration: none;
+}
+
+.content {
+  padding: 20px;
+}
+
+.image-left,
+.image-right {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.image-left img,
+.image-right img {
+  max-width: 200px;
+  max-height: 200px;
+  background-color: blueviolet;
+}
+
+.image-left .description {
+  flex: 1;
+}
+
+.image-right {
+  flex-direction: row-reverse;
+}
+
+.image-right .description {
+  flex: 1;
+}
