@@ -1,60 +1,63 @@
 body {
+  font-family: "Arial", sans-serif;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  background-color: #fff;
 }
 
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-  background-color: #333;
+nav {
+  background-color: #ff6347;
   color: white;
-}
-
-.brand-name {
-  font-family: "Kode Mono", monospace;
-  font-optical-sizing: auto;
-  font-weight: 40px;
-  font-style: normal;
-}
-
-.nav-menu {
+  padding: 1rem;
   display: flex;
-  gap: 20px;
+  flex-direction: row;
+  flex: space-between;
 }
 
-.nav-menu a {
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+nav ul li {
+  margin: 0;
+}
+
+nav ul li a {
   color: white;
   text-decoration: none;
+  padding: 0.5rem 1rem;
 }
 
-.content {
-  padding: 20px;
+nav ul li a:hover {
+  background-color: #ff7f50;
+  border-radius: 5px;
 }
 
-.image-left,
-.image-right {
+.container {
   display: flex;
+  flex-direction: row;
   align-items: center;
-  margin-bottom: 20px;
+  margin: 10% 0% 10% 0%;
 }
 
-.image-left img,
-.image-right img {
-  max-width: 200px;
-  max-height: 200px;
-  background-color: blueviolet;
+.container img {
+  max-width: 20%;
+  height: auto;
+  background-color: #ffeb3b; /* Background color for the image */
+  padding: 3% 3% 4% 9%;
+  border-radius: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: block;
 }
 
-.image-left .description {
-  flex: 1;
-}
-
-.image-right {
-  flex-direction: row-reverse;
-}
-
-.image-right .description {
-  flex: 1;
+.container p {
+  max-width: 600px;
+  text-align: center;
+  margin-top: 1rem;
+  color: #333;
 }
