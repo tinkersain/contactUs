@@ -42,22 +42,13 @@ body {
 .nav-logo img {
   width: 25%;
 }
-.input-section {
-  display: flex;
-  justify-content: space-around;
-  background-color: #92abcb;
-  padding: 1%;
-  margin-top: 1%;
-}
-
-.input-section input,
-.input-section button {
-  background-color: #ffffff;
-  padding: 10px;
+.input-section input {
+  border: 3px solid #243185;
+  border-radius: 8px;
+  padding: 1% 7% 1% 7%;
   margin: 5px;
   text-align: center;
 }
-
 .input-section button {
   background-color: #243185;
   border-radius: 10px;
