@@ -17,6 +17,9 @@ body {
   padding: 10px;
 }
 
+.nav-links {
+  display: flex;
+}
 .nav-links a {
   background-color: #92abcb;
   padding: 10px;
@@ -24,7 +27,18 @@ body {
   text-align: center;
   color: black;
   width: 20%;
+  text-decoration: none;
+  border-radius: 6px;
 }
+.nav-links a:hover {
+  background-color: black;
+  color: white;
+}
+
+.nav-logo {
+  display: flex;
+}
+
 .nav-logo img {
   width: 25%;
 }
