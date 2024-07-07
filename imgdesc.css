@@ -16,9 +16,7 @@ body {
   background-color: #ffffff;
   padding: 10px;
 }
-.nav-links {
-  display: flex;
-}
+
 .nav-links a {
   background-color: #92abcb;
   padding: 10px;
@@ -26,17 +24,6 @@ body {
   text-align: center;
   color: black;
   width: 20%;
-  text-decoration: none;
-  border-radius: 6px;
-}
-
-.nav-links a:hover {
-  background-color: black;
-  color: white;
-}
-
-.nav-logo {
-  display: flex;
 }
 .nav-logo img {
   width: 25%;
@@ -48,13 +35,15 @@ body {
   padding: 1%;
   margin-top: 1%;
 }
-.input-section input {
-  border: 3px solid #243185;
-  border-radius: 8px;
-  padding: 1% 7% 1% 7%;
+
+.input-section input,
+.input-section button {
+  background-color: #ffffff;
+  padding: 10px;
   margin: 5px;
   text-align: center;
 }
+
 .input-section button {
   background-color: #243185;
   border-radius: 10px;
@@ -86,8 +75,6 @@ body {
 .content2 {
   display: flex;
   gap: 20px;
-  flex-direction: row;
-  gap: 2%;
   justify-content: space-between;
 }
 .data,
