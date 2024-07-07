@@ -4,14 +4,12 @@ body {
   padding: 0;
   box-sizing: border-box;
 }
-
 .container {
   width: 100%;
   margin: 0 auto;
   background-color: #d7e3f8;
   box-sizing: border-box;
 }
-
 .nav {
   display: flex;
   justify-content: space-between;
@@ -22,7 +20,6 @@ body {
 .nav-links {
   display: flex;
 }
-
 .nav-links a {
   background-color: #92abcb;
   padding: 10px;
@@ -33,7 +30,6 @@ body {
   text-decoration: none;
   border-radius: 6px;
 }
-
 .nav-links a:hover {
   background-color: black;
   color: white;
@@ -46,7 +42,6 @@ body {
 .nav-logo img {
   width: 25%;
 }
-
 .input-section {
   display: flex;
   justify-content: space-around;
@@ -55,10 +50,10 @@ body {
   margin-top: 1%;
 }
 
-.input-section input {
-  border: 3px solid #243185;
-  border-radius: 8px;
-  padding: 1% 7% 1% 7%;
+.input-section input,
+.input-section button {
+  background-color: #ffffff;
+  padding: 10px;
   margin: 5px;
   text-align: center;
 }
@@ -93,8 +88,7 @@ body {
 }
 .content2 {
   display: flex;
-  flex-direction: row;
-  gap: 2%;
+  gap: 20px;
   justify-content: space-between;
 }
 .data,
