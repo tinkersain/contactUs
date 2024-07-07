@@ -1,63 +1,78 @@
 body {
-  font-family: "Arial", sans-serif;
+  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #fff;
-}
-
-nav {
-  background-color: #ff6347;
-  color: white;
-  padding: 1rem;
-  display: flex;
-  flex-direction: row;
-  flex: space-between;
-}
-
-nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: space-around;
-}
-
-nav ul li {
-  margin: 0;
-}
-
-nav ul li a {
-  color: white;
-  text-decoration: none;
-  padding: 0.5rem 1rem;
-}
-
-nav ul li a:hover {
-  background-color: #ff7f50;
-  border-radius: 5px;
 }
 
 .container {
+  width: 100%;
+  margin: 0 auto;
+  background-color: #f8d7da;
+}
+
+.nav {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin: 10% 0% 10% 0%;
+  justify-content: space-between;
+  background-color: #f4cac4;
+  padding: 10px;
 }
 
-.container img {
-  max-width: 20%;
-  height: auto;
-  background-color: #ffeb3b; /* Background color for the image */
-  padding: 3% 3% 4% 9%;
-  border-radius: 30px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  display: block;
-}
-
-.container p {
-  max-width: 600px;
+.nav-links a {
+  background-color: #8c78cc;
+  padding: 10px;
+  margin: 20px 20px 20px;
   text-align: center;
-  margin-top: 1rem;
-  color: #333;
+  color: black;
+  width: 20%;
+  border-radius: 20%;
+  border: 1px solid black;
+}
+.nav-logo img {
+  width: 20%;
+  height: auto;
+  padding: 0%;
+  margin: 0%;
+}
+
+.input-section {
+  display: flex;
+  justify-content: space-around;
+  background-color: #c3a2d6;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.input-section input,
+.input-section button {
+  background-color: #ffffff;
+  padding: 10px;
+  margin: 5px;
+  text-align: center;
+}
+.input-section button {
+  background-color: #8be88b;
+  border-radius: 20%;
+  width: 7%;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 20px;
+  background-color: white;
+  margin-top: 10px;
+}
+
+.data,
+.image {
+  background-color: #dbc06d;
+  padding: 5%;
+  text-align: center;
+}
+
+.image img {
+  width: 30%;
+  height: fit-content;
 }
