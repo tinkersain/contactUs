@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <a href="addProd.html">add</a>
+    <a href="homePage.html">home</a>
+    <a href="login.html">login</a>
+    <a href="signUp.html">signUp</a>
+
+    <h1>login</h1>
+    <input type="text" placeholder="username" id="userName" />
+    <input type="text" placeholder="password" id="pass" />
+    <button onclick="login()">login</button>
+    <button onclick="logout()">Log out</button>
+  </body>
+  <script>
+    function login() {
+      var userName = document.getElementById("userName").value;
+      var password = document.getElementById("pass").value;
+      var exist = false;
+
+      if (userName.length === 0 || password.length === 0) {
+        alert("Please fill all the fields");
+      } else {
+        let userData = JSON.parse(localStorage.getItem("userdata"));
+        for (var i = 0; i < userData.length; i++) {
+          if (userData[i].username === userName) {
+            if (userData[i].password === password) {
+              exist = true;
+              let loginUser = userName;
+              localStorage.setItem("loginUser", loginUser);
+              alert("Login Successfull");
+              window.location.href = "./homepage.html";
+            }
+          }
+        }
+        if (exist === false) {
+          alert("User Does not exist");
+        }
+      }
+    }
+
+    function logout() {
+      localStorage.removeItem("loginUser");
+    }
+  </script>
+</html>

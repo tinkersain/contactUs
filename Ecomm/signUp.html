@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <a href="addProd.html">add</a>
+    <a href="homePage.html">home</a>
+    <a href="login.html">login</a>
+    <a href="signUp.html">signUp</a>
+    <br />
+    <input type="text" placeholder="username" id="userName" />
+    <input type="password" placeholder="password" name="" id="pass" />
+    <button onclick="signUpFun()">SignUp</button>
+
+    <script>
+      function signUpFun() {
+        var userName = document.getElementById("userName").value;
+        var pass = document.getElementById("pass").value;
+
+        if (userName.length === 0 || pass.length === 0) {
+          alert("please fill all the fields");
+        } else {
+          let userDetails = {
+            username: userName,
+            password: pass,
+          };
+          //localstorage.setitem(itemname,value [number,string])
+          //localstorage.getitem(itemname)
+          var userData = localStorage.getItem("userdata");
+          if (userData === null) {
+            let userData = [];
+            userData.push(userDetails);
+            localStorage.setItem("userdata", JSON.stringify(userData));
+          } else {
+            let userData1 = JSON.parse(userData);
+            userData1.push(userDetails);
+            localStorage.setItem("userdata", JSON.stringify(userData1));
+          }
+          alert("SignUp Successfull");
+        }
+      }
+    </script>
+  </body>
+</html>
