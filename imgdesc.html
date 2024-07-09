@@ -21,19 +21,32 @@
           <a href="#">Signup</a>
         </div>
       </div>
-     <div class="input-container">
-            <input id="input1" type="text" placeholder="Input 1">
-            <input id="input2" type="text" placeholder="Input 2 (Image URL)">
-            <button onclick="addContent()">Add</button>
-            <button onclick="removeContent()">Remove</button>
-        </div>
-        <div class="content">
-            <div id="data1" class="data-box">Data</div>
-            <div id="image1" class="image-box">Image</div>
-            <div id="image2" class="image-box">Image</div>
-            <div id="data2" class="data-box">Data</div>
-        </div>
+      <div class="input-section">
+        <input type="text" id="input1" placeholder="Book-1 Summary " />
+        <input type="text" id="input2" placeholder="Book-2 Summary" />
+        <button onclick="handleClick()">Add</button>
       </div>
+      <div class="content" id="parentContent"></div>
+      <!-- <div class="content" id="parentContent">
+        <div class="content1">
+          <div class="data" id="data1">No Data</div>
+          <div class="image" id="image1">
+            <img
+              src="https://www.inspiredlifehq.com/wp-content/uploads/2021/07/power-of-now-min-768x1181.jpeg"
+              alt="Book Cover 1"
+            />
+          </div>
+        </div>
+        <div class="content2">
+          <div class="image" id="image2">
+            <img
+              src="https://static.wixstatic.com/media/e6e476_247b339ff81c4eb7bfa3cae6d483791b~mv2_d_1703_2560_s_2.jpg/v1/fill/w_1000,h_1503,al_c,q_90,usm_0.66_1.00_0.01/e6e476_247b339ff81c4eb7bfa3cae6d483791b~mv2_d_1703_2560_s_2.jpg"
+              alt="Book Cover 2"
+            />
+          </div>
+          <div class="data" id="data2">No Data</div>
+        </div>
+      </div> -->
     </div>
   </body>
 </html>

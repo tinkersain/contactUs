@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .parent {
+      display: flex;
+      overflow-x: scroll;
+      gap: 2%;
+    }
+    .product {
+      padding: 1%;
+      border: 2px solid grey;
+      border-radius: 6px;
+    }
+    .product img {
+      width: 20%;
+    }
+  </style>
+  <body>
+    <a href="addProd.html">add</a>
+    <a href="homePage.html">home</a>
+    <a href="login.html">login</a>
+    <a href="signUp.html">signUp</a>
+
+    <h1>Home</h1>
+    <div class="parent" id="parent"></div>
+
+    <script>
+      let productData = JSON.parse(localStorage.getItem("productData"));
+      let parent = document.getElementById("parent");
+      for (var i = 0; i < productData.length; i++) {
+        const productDiv = `<div class="product">
+        <img src=${productData[i].image} alt="error"/>
+        <h1>${productData[i].name}</h1>
+        <h3>Rs. ${productData[i].price}</h3>
+        </div>`;
+
+        parent.innerHTML += productDiv;
+      }
+    </script>
+  </body>
+</html>

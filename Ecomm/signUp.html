@@ -6,33 +6,42 @@
     <title>Document</title>
   </head>
   <body>
-    <input type="text" id="userName" />
-    <input type="password" id="pass" />
-    <button id="btn">Sign Up</button>
+    <a href="addProd.html">add</a>
+    <a href="homePage.html">home</a>
+    <a href="login.html">login</a>
+    <a href="signUp.html">signUp</a>
+    <br />
+    <input type="text" placeholder="username" id="userName" />
+    <input type="password" placeholder="password" name="" id="pass" />
+    <button onclick="signUpFun()">SignUp</button>
+
+    <script>
+      function signUpFun() {
+        var userName = document.getElementById("userName").value;
+        var pass = document.getElementById("pass").value;
+
+        if (userName.length === 0 || pass.length === 0) {
+          alert("please fill all the fields");
+        } else {
+          let userDetails = {
+            username: userName,
+            password: pass,
+          };
+          //localstorage.setitem(itemname,value [number,string])
+          //localstorage.getitem(itemname)
+          var userData = localStorage.getItem("userdata");
+          if (userData === null) {
+            let userData = [];
+            userData.push(userDetails);
+            localStorage.setItem("userdata", JSON.stringify(userData));
+          } else {
+            let userData1 = JSON.parse(userData);
+            userData1.push(userDetails);
+            localStorage.setItem("userdata", JSON.stringify(userData1));
+          }
+          alert("SignUp Successfull");
+        }
+      }
+    </script>
   </body>
 </html>
-<script>
-  let signUpData = [];
-  let flag = false;
-  let userName = document.querySelector("#userName");
-  let pass = document.querySelector("#pass");
-
-  function signUpFun() {
-    let obj = {
-      userName: userName.value,
-      pass: pass.value,
-    };
-    for (let i = 0; i < signUpData.length; i++) {
-      if (signUpData[i].userName == obj.userName) {
-        flag = true;
-        alert("User Name Already Exist");
-      } else {
-        flag = false;
-      }
-    }
-    if (flag === false) {
-      signUpData.push(obj);
-    }
-    console.log(signUpData);
-  }
-</script>
