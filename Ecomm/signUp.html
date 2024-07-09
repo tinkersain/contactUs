@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" id="userName" />
+    <input type="password" id="pass" />
+    <button id="btn">Sign Up</button>
+  </body>
+</html>
+<script>
+  let signUpData = [];
+  let flag = false;
+  let userName = document.querySelector("#userName");
+  let pass = document.querySelector("#pass");
+
+  function signUpFun() {
+    let obj = {
+      userName: userName.value,
+      pass: pass.value,
+    };
+    for (let i = 0; i < signUpData.length; i++) {
+      if (signUpData[i].userName == obj.userName) {
+        flag = true;
+        alert("User Name Already Exist");
+      } else {
+        flag = false;
+      }
+    }
+    if (flag === false) {
+      signUpData.push(obj);
+    }
+    console.log(signUpData);
+  }
+</script>
